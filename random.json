@@ -10,11 +10,9 @@
         { "action": "extract_mod", "destination": "./temp_mod" },
         {
           "action": "copy_overwrite",
-          "source": "./temp_mod/game/",
-          "destination": "./game/"
+          "source": "./temp_mod/DDMC ver1.6/",
+          "destination": "./"
         },
-        { "action": "delete_file", "target": "./game/scripts.rpa" },
-        { "action": "cleanup_temp", "target": "./temp_mod" }
       ]
     }
   }
