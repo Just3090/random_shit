@@ -12,7 +12,7 @@
           "action": "copy_overwrite",
           "source": "./temp_mod/DDMC ver1.6/",
           "destination": "./"
-        },
+        }
       ]
     }
   }
