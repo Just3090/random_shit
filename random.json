@@ -1,18 +1,46 @@
 {
-  "manifest_version": "1.1",
+  "manifest_version": "1.0",
   "recipes": {
     "meni-cuquis": {
       "is_supported": true,
       "downloadable": false,
       "executable": "DDLC.exe",
       "steps": [
-        { "action": "extract_base", "destination": "./" },
+        { "action": "extract_base", "destination": "./temp_ddlc" },
         { "action": "extract_mod", "destination": "./temp_mod" },
+        {
+          "action": "copy_overwrite",
+          "source": "./temp_ddlc/DDLC-1.1.1-pc/",
+          "destination": "./"
+        },
         {
           "action": "copy_overwrite",
           "source": "./temp_mod/DDMC ver1.6/",
           "destination": "./"
-        }
+        },
+        { "action": "cleanup_temp", "target": "./temp_ddlc" },
+        { "action": "cleanup_temp", "target": "./temp_mod" }
+      ]
+    },
+    "sayori-as-an-adult": {
+      "is_supported": true,
+      "downloadable": false,
+      "executable": "SayoriAsAnAdult.exe",
+      "steps": [
+        { "action": "extract_base", "destination": "./temp_ddlc" },
+        { "action": "extract_mod", "destination": "./temp_mod" },
+        {
+          "action": "copy_overwrite",
+          "source": "./temp_ddlc/DDLC-1.1.1-pc/",
+          "destination": "./"
+        },
+        {
+          "action": "copy_overwrite",
+          "source": "./temp_mod/Sayori As An Adult ESPAÑOL/",
+          "destination": "./"
+        },
+        { "action": "cleanup_temp", "target": "./temp_ddlc" },
+        { "action": "cleanup_temp", "target": "./temp_mod" }
       ]
     }
   }
